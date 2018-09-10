@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
 	selector: 'app-demo-form-control',
@@ -8,6 +9,15 @@ export class DemoFormControlComponent implements OnInit {
 
 	constructor() {}
 
-	ngOnInit() {}
+	ngOnInit() {
+		let nameControl = new FormControl(`Nate`);
+
+		let name = nameControl.value;
+
+		nameControl.errors;
+		nameControl.dirty;
+		nameControl.valid;
+
+	}
 
 }
