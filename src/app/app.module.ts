@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ExampleModel } from './models/example.model';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ItemComponent } from './sidebar/item/item.component';
+import { IntroComponent } from './intro/intro.component';
 
 
 export const examples: ExampleModel[] = [ 
@@ -16,7 +17,8 @@ export const examples: ExampleModel[] = [
 	declarations: [
 		AppComponent,
 		SidebarComponent,
-		ItemComponent
+		ItemComponent,
+		IntroComponent
 	],
 	imports: [
 		BrowserModule
