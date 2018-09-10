@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-
 import { ExampleModel } from './models/example.model';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ItemComponent } from './sidebar/item/item.component';
@@ -13,6 +13,10 @@ export const examples: ExampleModel[] = [
 	{ label: 'Intro' }
 ];
 
+const routes: Routes = [
+	{ path: '', component: IntroComponent, pathMatch: 'full' }
+];
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -21,7 +25,8 @@ export const examples: ExampleModel[] = [
 		IntroComponent
 	],
 	imports: [
-		BrowserModule
+		BrowserModule,
+		RouterModule.forRoot(routes)
 	],
 	providers: [
 		{ provide: 'Examples', useValue: examples }
