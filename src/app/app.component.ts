@@ -1,4 +1,5 @@
 import { Component, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ExampleModel } from './models/example.model';
 
@@ -9,5 +10,8 @@ import { ExampleModel } from './models/example.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	constructor(@Inject('Examples') public examples: ExampleModel[]) {}
+	constructor(
+		private router: Router,
+		@Inject('Examples') public examples: ExampleModel[]
+	) {}
 }
