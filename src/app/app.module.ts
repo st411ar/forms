@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { ExampleModel } from './models/example.model';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 export const examples: ExampleModel[] = [ 
@@ -12,7 +13,8 @@ export const examples: ExampleModel[] = [
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
+		SidebarComponent
 	],
 	imports: [
 		BrowserModule
