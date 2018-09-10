@@ -7,14 +7,17 @@ import { ExampleModel } from './models/example.model';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ItemComponent } from './sidebar/item/item.component';
 import { IntroComponent } from './intro/intro.component';
+import { DemoFormControlComponent } from './examples/demo-form-control/demo-form-control.component';
 
 
 export const examples: ExampleModel[] = [ 
-	{ label: 'Intro' }
+	{ label: 'Intro', path: '' },
+	{ label: 'Form Control', path: 'control' },
 ];
 
 const routes: Routes = [
-	{ path: '', component: IntroComponent, pathMatch: 'full' }
+	{ path: '', component: IntroComponent, pathMatch: 'full' },
+	{ path: 'control', component: DemoFormControlComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -22,7 +25,8 @@ const routes: Routes = [
 		AppComponent,
 		SidebarComponent,
 		ItemComponent,
-		IntroComponent
+		IntroComponent,
+		DemoFormControlComponent
 	],
 	imports: [
 		BrowserModule,
