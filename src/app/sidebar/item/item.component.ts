@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -11,8 +12,20 @@ import { ExampleModel } from '../../models/example.model';
 export class ItemComponent implements OnInit {
 	@Input() item: ExampleModel;
 
-	constructor(private router: Router) {}
+	constructor(
+		private location: Location,
+		private router: Router
+	) {}
 
 	ngOnInit() {}
+
+
+	isActive(): boolean {
+		let itemPath: string = this.item.path;
+		if (itemPath !== '') {
+			itemPath = `/${itemPath}`;
+		}
+		return itemPath === this.location.path();
+	}
 
 }
