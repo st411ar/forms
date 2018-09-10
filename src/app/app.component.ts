@@ -9,5 +9,5 @@ import { ExampleModel } from './models/example.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	constructor(@Inject('Examples') examples: ExampleModel[]) {}
+	constructor(@Inject('Examples') public examples: ExampleModel[]) {}
 }
