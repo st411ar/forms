@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ExampleModel } from '../../models/example.model';
 
@@ -10,7 +11,7 @@ import { ExampleModel } from '../../models/example.model';
 export class ItemComponent implements OnInit {
 	@Input() item: ExampleModel;
 
-	constructor() {}
+	constructor(private router: Router) {}
 
 	ngOnInit() {}
 

@@ -11,13 +11,13 @@ import { DemoFormControlComponent } from './examples/demo-form-control/demo-form
 
 
 export const examples: ExampleModel[] = [ 
-	{ label: 'Intro' },
-	{ label: 'Form Control' },
+	{ label: 'Intro', path: '' },
+	{ label: 'Form Control', path: 'control' },
 ];
 
 const routes: Routes = [
 	{ path: '', component: IntroComponent, pathMatch: 'full' },
-	{ path: 'demo-form-control', component: DemoFormControlComponent, pathMatch: 'full' },
+	{ path: 'control', component: DemoFormControlComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
