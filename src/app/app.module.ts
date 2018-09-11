@@ -15,6 +15,7 @@ import { DemoFormSkuWithBuilderComponent } from './examples/demo-form-sku-with-b
 import { DemoFormWithValidationsExplicitComponent } from './examples/demo-form-with-validations-explicit/demo-form-with-validations-explicit.component';
 import { DemoFormWithValidationsShorthandComponent } from './examples/demo-form-with-validations-shorthand/demo-form-with-validations-shorthand.component';
 import { DemoFormWithCustomValidationComponent } from './examples/demo-form-with-custom-validation/demo-form-with-custom-validation.component';
+import { DemoFormWithEventsComponent } from './examples/demo-form-with-events/demo-form-with-events.component';
 
 
 export const examples: ExampleModel[] = [ 
@@ -26,6 +27,7 @@ export const examples: ExampleModel[] = [
 	{ label: 'Validation Explicit', path: 'validations-explicit' },
 	{ label: 'Validation Shorthand', path: 'validations-shorthand' },
 	{ label: 'Custom Validation', path: 'custom-validation' },
+	{ label: 'Events', path: 'events' },
 ];
 
 const routes: Routes = [
@@ -37,6 +39,7 @@ const routes: Routes = [
 	{ path: 'validations-explicit', component: DemoFormWithValidationsExplicitComponent, pathMatch: 'full' },
 	{ path: 'validations-shorthand', component: DemoFormWithValidationsShorthandComponent, pathMatch: 'full' },
 	{ path: 'custom-validation', component: DemoFormWithCustomValidationComponent, pathMatch: 'full' },
+	{ path: 'events', component: DemoFormWithEventsComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -51,7 +54,8 @@ const routes: Routes = [
 		DemoFormSkuWithBuilderComponent,
 		DemoFormWithValidationsExplicitComponent,
 		DemoFormWithValidationsShorthandComponent,
-		DemoFormWithCustomValidationComponent
+		DemoFormWithCustomValidationComponent,
+		DemoFormWithEventsComponent
 	],
 	imports: [
 		BrowserModule,
