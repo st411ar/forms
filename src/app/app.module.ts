@@ -12,6 +12,7 @@ import { DemoFormControlComponent } from './examples/demo-form-control/demo-form
 import { DemoFormGroupComponent } from './examples/demo-form-group/demo-form-group.component';
 import { DemoFormSkuComponent } from './examples/demo-form-sku/demo-form-sku.component';
 import { DemoFormSkuWithBuilderComponent } from './examples/demo-form-sku-with-builder/demo-form-sku-with-builder.component';
+import { DemoFormWithValidationsExplicitComponent } from './examples/demo-form-with-validations-explicit/demo-form-with-validations-explicit.component';
 
 
 export const examples: ExampleModel[] = [ 
@@ -20,6 +21,7 @@ export const examples: ExampleModel[] = [
 	{ label: 'Form Group', path: 'group' },
 	{ label: 'SKU', path: 'sku' },
 	{ label: 'SKU (with Builder)', path: 'sku-builder' },
+	{ label: 'Validation Explicit', path: 'validations-explicit' },
 ];
 
 const routes: Routes = [
@@ -28,6 +30,7 @@ const routes: Routes = [
 	{ path: 'group', component: DemoFormGroupComponent, pathMatch: 'full' },
 	{ path: 'sku', component: DemoFormSkuComponent, pathMatch: 'full' },
 	{ path: 'sku-builder', component: DemoFormSkuWithBuilderComponent, pathMatch: 'full' },
+	{ path: 'validations-explicit', component: DemoFormWithValidationsExplicitComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -39,7 +42,8 @@ const routes: Routes = [
 		DemoFormControlComponent,
 		DemoFormGroupComponent,
 		DemoFormSkuComponent,
-		DemoFormSkuWithBuilderComponent
+		DemoFormSkuWithBuilderComponent,
+		DemoFormWithValidationsExplicitComponent
 	],
 	imports: [
 		BrowserModule,
