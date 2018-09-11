@@ -6,18 +6,26 @@ import { FormControl } from '@angular/forms';
 	templateUrl: './demo-form-control.component.html'
 })
 export class DemoFormControlComponent implements OnInit {
+	control: FormControl;
 
 	constructor() {}
 
 	ngOnInit() {
-		let nameControl: FormControl = new FormControl(`Nate`);
+		this.control = new FormControl(`Nate`);
 
-		let name = nameControl.value;
-
-		nameControl.errors;
-		nameControl.dirty;
-		nameControl.valid;
-
+		this.control.valueChanges.subscribe(() => this.logControlState());
 	}
 
+
+	onSubmit(): void {
+		this.logControlState();
+	}
+
+
+	private logControlState(): void {
+		console.log(`this.control.value: ${this.control.value}`);
+		console.log(`this.control.errors: ${this.control.errors}`);
+		console.log(`this.control.dirty: ${this.control.dirty}`);
+		console.log(`this.control.valid: ${this.control.valid}`);
+	}
 }
