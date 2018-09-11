@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -9,18 +10,21 @@ import { ItemComponent } from './sidebar/item/item.component';
 import { IntroComponent } from './intro/intro.component';
 import { DemoFormControlComponent } from './examples/demo-form-control/demo-form-control.component';
 import { DemoFormGroupComponent } from './examples/demo-form-group/demo-form-group.component';
+import { DemoFormSkuComponent } from './examples/demo-form-sku/demo-form-sku.component';
 
 
 export const examples: ExampleModel[] = [ 
 	{ label: 'Intro', path: '' },
 	{ label: 'Form Control', path: 'control' },
 	{ label: 'Form Group', path: 'group' },
+	{ label: 'SKU', path: 'sku' },
 ];
 
 const routes: Routes = [
 	{ path: '', component: IntroComponent, pathMatch: 'full' },
 	{ path: 'control', component: DemoFormControlComponent, pathMatch: 'full' },
 	{ path: 'group', component: DemoFormGroupComponent, pathMatch: 'full' },
+	{ path: 'sku', component: DemoFormSkuComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -30,10 +34,13 @@ const routes: Routes = [
 		ItemComponent,
 		IntroComponent,
 		DemoFormControlComponent,
-		DemoFormGroupComponent
+		DemoFormGroupComponent,
+		DemoFormSkuComponent
 	],
 	imports: [
 		BrowserModule,
+		FormsModule,
+		ReactiveFormsModule,
 		RouterModule.forRoot(routes)
 	],
 	providers: [
