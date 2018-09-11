@@ -8,16 +8,19 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ItemComponent } from './sidebar/item/item.component';
 import { IntroComponent } from './intro/intro.component';
 import { DemoFormControlComponent } from './examples/demo-form-control/demo-form-control.component';
+import { DemoFormGroupComponent } from './examples/demo-form-group/demo-form-group.component';
 
 
 export const examples: ExampleModel[] = [ 
 	{ label: 'Intro', path: '' },
 	{ label: 'Form Control', path: 'control' },
+	{ label: 'Form Group', path: 'group' },
 ];
 
 const routes: Routes = [
 	{ path: '', component: IntroComponent, pathMatch: 'full' },
 	{ path: 'control', component: DemoFormControlComponent, pathMatch: 'full' },
+	{ path: 'group', component: DemoFormGroupComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -26,7 +29,8 @@ const routes: Routes = [
 		SidebarComponent,
 		ItemComponent,
 		IntroComponent,
-		DemoFormControlComponent
+		DemoFormControlComponent,
+		DemoFormGroupComponent
 	],
 	imports: [
 		BrowserModule,

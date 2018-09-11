@@ -10,7 +10,7 @@ export class DemoFormControlComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit() {
-		let nameControl = new FormControl(`Nate`);
+		let nameControl: FormControl = new FormControl(`Nate`);
 
 		let name = nameControl.value;
 
