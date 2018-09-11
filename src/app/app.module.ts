@@ -11,6 +11,7 @@ import { IntroComponent } from './intro/intro.component';
 import { DemoFormControlComponent } from './examples/demo-form-control/demo-form-control.component';
 import { DemoFormGroupComponent } from './examples/demo-form-group/demo-form-group.component';
 import { DemoFormSkuComponent } from './examples/demo-form-sku/demo-form-sku.component';
+import { DemoFormSkuWithBuilderComponent } from './examples/demo-form-sku-with-builder/demo-form-sku-with-builder.component';
 
 
 export const examples: ExampleModel[] = [ 
@@ -18,6 +19,7 @@ export const examples: ExampleModel[] = [
 	{ label: 'Form Control', path: 'control' },
 	{ label: 'Form Group', path: 'group' },
 	{ label: 'SKU', path: 'sku' },
+	{ label: 'SKU (with Builder)', path: 'sku-builder' },
 ];
 
 const routes: Routes = [
@@ -25,6 +27,7 @@ const routes: Routes = [
 	{ path: 'control', component: DemoFormControlComponent, pathMatch: 'full' },
 	{ path: 'group', component: DemoFormGroupComponent, pathMatch: 'full' },
 	{ path: 'sku', component: DemoFormSkuComponent, pathMatch: 'full' },
+	{ path: 'sku-builder', component: DemoFormSkuWithBuilderComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -35,7 +38,8 @@ const routes: Routes = [
 		IntroComponent,
 		DemoFormControlComponent,
 		DemoFormGroupComponent,
-		DemoFormSkuComponent
+		DemoFormSkuComponent,
+		DemoFormSkuWithBuilderComponent
 	],
 	imports: [
 		BrowserModule,
