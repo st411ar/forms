@@ -1,3 +1,16 @@
-<p>
-  demo-form-group works!
-</p>
+<form [formGroup]="personForm">
+	<div>
+		<label for="firstNameField">first name</label>
+		<input id="firstNameField" [formControl]="personForm.get('firstName')" />
+	</div>
+	<div>
+		<label for="lastNameField">last name</label>
+		<input id="lastNameField" [formControl]="personForm.get('lastName')" />
+	</div>
+	<div>
+		<label for="zipField">zip</label>
+		<input id="zipField" [formControl]="personForm.get('zip')" />
+	</div>
+
+	<button (click)="onSubmit()">submit</button>
+</form>

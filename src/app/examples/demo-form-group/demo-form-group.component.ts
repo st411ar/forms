@@ -6,21 +6,29 @@ import { FormControl, FormGroup } from '@angular/forms';
 	templateUrl: './demo-form-group.component.html'
 })
 export class DemoFormGroupComponent implements OnInit {
+	personForm: FormGroup;
 
-	constructor() {}
-
-	ngOnInit() {
-		let personInfo: FormGroup = new FormGroup({
+	constructor() {
+		this.personForm = new FormGroup({
 			firstName: new FormControl(`Nate`),
 			lastName: new FormControl(`Murray`),
 			zip: new FormControl(`90210`)
 		});
 
-		personInfo.value;
+		this.personForm.valueChanges.subscribe(() => this.logPersonFormState());
+	}
 
-		personInfo.errors;
-		personInfo.dirty;
-		personInfo.valid;
+	ngOnInit() {
+	}
+
+
+	onSubmit(): void {
+		this.logPersonFormState();
+	}
+
+
+	private logPersonFormState(): void {
+		console.log(this.personForm);
 	}
 
 }
